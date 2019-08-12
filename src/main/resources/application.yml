@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: audit-service
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/sample_db?useSSL=false
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+        strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+      ddl-auto: update
+
+server:
+  port: 8080
